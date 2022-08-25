@@ -32,17 +32,20 @@
         echo '</tr>';
         echo '</thead>';
         echo '<tbody>';
-        while ( $fila = $arr->fetch_assoc() ) {
+        if ($arr){
+             
+        foreach($arr as $fila){
+
             echo '<tr>';
-            echo '<td>' . $fila[ 'nro_doc' ] . '</td>';
-            echo '<td>' . $fila[ 'nombres' ] . '</td>';
-            echo '<td>' . $fila[ 'paterno' ] . '</td>';
-            echo '<td>' . $fila[ 'materno' ] . '</td>';
-            echo '<td>' . $fila[ 'sexo' ] . '</td>';
-            echo '<td>' . $fila[ 'fecha_nac' ] . '</td>';
-            echo '<td>' . $fila[ 'estado_civil' ] . '</td>';
-            echo '<td>' . $fila[ 'expedido' ] . '</td>';
-            echo '<td>' . $fila[ 'foto' ] . '</td>';
+            echo '<td>' . $fila ["nro_doc"] . '</td>';
+            echo '<td>' . $fila ["nombres"] . '</td>';
+            echo '<td>' . $fila ["paterno"] . '</td>';
+            echo '<td>' . $fila ["materno"] . '</td>';
+            echo '<td>' . $fila ["sexo"] . '</td>';
+            echo '<td>' . $fila ["fecha_nac"] . '</td>';
+            echo '<td>' . $fila ["estado_civil"] . '</td>';
+            echo '<td>' . $fila ["expedido"] . '</td>';
+            echo '<td>' . $fila ["foto"] . '</td>';
             echo '<td>';
             echo '<a href="../controllers/verSocio.php?id=' . $fila[ 'id' ] . '">Ver</a>';
             echo '<a href="../controllers/editarSocio.php?id=' . $fila[ 'id' ] . '">Editar</a>';
@@ -50,8 +53,10 @@
             echo '</td>';
             echo '</tr>';
         }
+    }
+
         echo '</tbody>';
         echo '</table>';
         
-    }
+}
 ?>
