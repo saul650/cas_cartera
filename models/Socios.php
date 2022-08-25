@@ -1,26 +1,4 @@
 <?php 
-    // CREATE TABLE `socios` (
-    //   `id` int(10) NOT NULL AUTO_INCREMENT,
-    //   `nombres` varchar(35) COLLATE utf8_spanish_ci NOT NULL,
-    //   `paterno` varchar(25) COLLATE utf8_spanish_ci NOT NULL,
-    //   `materno` varchar(25) COLLATE utf8_spanish_ci DEFAULT NULL,
-    //   `nro_doc` varchar(15) COLLATE utf8_spanish_ci NOT NULL COMMENT 'nro de ci incluyendo el nro complementario',
-    //   `expedido` varchar(2) COLLATE utf8_spanish_ci NOT NULL,
-    //   `sexo` varchar(1) COLLATE utf8_spanish_ci DEFAULT NULL,
-    //   `fecha_nac` date DEFAULT NULL,
-    //   `estado_civil` varchar(2) COLLATE utf8_spanish_ci DEFAULT NULL,
-    //   `foto` varchar(15) COLLATE utf8_spanish_ci DEFAULT NULL,
-    //   `idlog` int(10) NOT NULL,
-    //   `estado` varchar(2) COLLATE utf8_spanish_ci NOT NULL,
-    //   `idlog_coc` int(10) NOT NULL,
-    //   `num_correlativo` int(5) NOT NULL DEFAULT '0' COMMENT 'numero correlativo para socios y tener un control en kardex',
-    //   `estado_kardex` char(2) COLLATE utf8_spanish_ci NOT NULL DEFAULT '' COMMENT 'para el estado de kardex KN=kardex desactualizado, KI=kardex impreso o actualizado',
-    //   `mindef` char(2) COLLATE utf8_spanish_ci NOT NULL COMMENT 'BA=baja ministerio de defensa',
-    //   `idlog_mindef` int(10) NOT NULL COMMENT 'para saber la fecha de la accion',
-    //   PRIMARY KEY (`id`)
-    // )
-
-
     include 'Connection.php';
     class Socios {
         private $id;
