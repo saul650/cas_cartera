@@ -9,4 +9,4 @@
 <body>
     <?php include 'views/formula_busq.php' ?>
 </body>
-</html>
+</html>n

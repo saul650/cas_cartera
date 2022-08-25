@@ -7,7 +7,7 @@
         private $mysqli;
         
         public function __construct() {
-            $this->DB_NAME = 'ges_emi';
+            $this->DB_NAME = 'cas_testing';
             $this->DB_USER = 'root';
             $this->DB_PASS = '';
             $this->DB_HOST = 'localhost';

@@ -1,11 +1,12 @@
 <?php
     include '../models/Socios.php';
-    public function getSociosByPaternoOrNroDoc ( $dato ) {
+    function getSociosByPaternoOrNroDoc ( $dato ) {
+        $socios = new Socios();
         $sociosObtenidos = array();
         if ( is_numeric( $dato ) )
-            $sociosObtenidos = getSocioByNroDoc( $dato );
+            $sociosObtenidos = $socios->getSocioByNroDoc( $dato );
         else
-            $sociosObtenidos = getSociosByPaterno( $dato );
+            $sociosObtenidos =  $socios->getSociosByPaterno( $dato );
         return $sociosObtenidos;
     }
 ?>
