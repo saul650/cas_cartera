@@ -32,12 +32,13 @@
         echo '</tr>';
         echo '</thead>';
         echo '<tbody>';
-        if ($arr){
-             
-        foreach($arr as $fila){
 
+        if ($arr){
+           
+            foreach($arr as $fila){
             echo '<tr>';
             echo '<td>' . $fila ["nro_doc"] . '</td>';
+            
             echo '<td>' . $fila ["nombres"] . '</td>';
             echo '<td>' . $fila ["paterno"] . '</td>';
             echo '<td>' . $fila ["materno"] . '</td>';
