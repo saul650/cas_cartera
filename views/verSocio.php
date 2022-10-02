@@ -1,5 +1,6 @@
 <?php
   require_once( '../models/Socios.php' );
+  require_once( '../layout/layout.php' );
   function verSocio( $socio ) {
     $socioCard = '
       <div>
@@ -42,8 +43,9 @@
   // read path params id and call query to get socio
 
   $id = $_GET[ 'id' ];
-  $socios = getSocioById( $id );
-  if ( $socios.length > 0 )
+  $socio = new Socios();
+  $socios = $socio->getSocioById( $id );
+  if ( count($socios) > 0 )
     verSocio( $socios[ 0 ] );
   else
     echo ( layout( 'Ver Socio', '<h1> Socio no encontrado </h1>' ) );
