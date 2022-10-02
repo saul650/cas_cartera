@@ -20,9 +20,8 @@
             echo '<td>' . $papeleta ["porcentaje"] . '</td>';
             echo '<td>' . $papeleta ["cod_desc"] . '</td>';
             echo '<td>' . $papeleta ["tipo_moneda"] . '</td>';            echo '<td>';
-            echo '<a href="../controllers/verSocio.php?id=' . $papeleta[ 'id' ] . '">Ver</a>';
-            echo '<a href="../controllers/editarSocio.php?id=' . $papeleta[ 'id' ] . '">Editar</a>';
-            echo '<a href="../controllers/eliminarSocio.php?id=' . $papeleta[ 'id' ] . '">Eliminar</a>';
+            echo '<a href="../verSocio.php?id=' . $papeleta[ 'id' ] . '">Entrar</a>';
+         
             echo '</td>';
             echo '</tr>';
         }

@@ -11,7 +11,8 @@
         else {
             $sociosInstitucionales = new SociosInstitucion();
             $socioInstitucional = $sociosInstitucionales->getSocioInstitucionByPapeleta( $dato );
-            $sociosObtenidos =  $socios->getSociosByPaterno( $socioInstitucional[ 'id_socio' ] );
+            if ($socioInstitucional)
+                $sociosObtenidos =  $socios->getSocioById( $socioInstitucional[ 'id_socio' ] );
         }
         return $sociosObtenidos;
     }

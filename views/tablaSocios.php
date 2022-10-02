@@ -15,6 +15,8 @@
 //         private $estado_kardex;
 //         private $mindef;
 //         private $idlog_mindef;
+use function PHPSTORM_META\type;
+
     function tablaSocios ( $arr ) {
         echo '<table class="">';
         echo '<thead>';
@@ -28,17 +30,17 @@
         echo '<th>Estado Civil</th>';
         echo '<th>Expedido</th>';
         echo '<th>Foto</th>';
-        echo '<th>Acciones</th>';
+        echo '<th>Ver</th>';
         echo '</tr>';
         echo '</thead>';
         echo '<tbody>';
 
         if ($arr){
-           
             foreach($arr as $fila){
+                //echo json_encode($arr["nombres"]);
+                //echo json_encode($arr);
             echo '<tr>';
             echo '<td>' . $fila ["nro_doc"] . '</td>';
-            
             echo '<td>' . $fila ["nombres"] . '</td>';
             echo '<td>' . $fila ["paterno"] . '</td>';
             echo '<td>' . $fila ["materno"] . '</td>';
@@ -48,9 +50,7 @@
             echo '<td>' . $fila ["expedido"] . '</td>';
             echo '<td>' . $fila ["foto"] . '</td>';
             echo '<td>';
-            echo '<a href="../controllers/verSocio.php?id=' . $fila[ 'id' ] . '">Ver</a>';
-            echo '<a href="../controllers/editarSocio.php?id=' . $fila[ 'id' ] . '">Editar</a>';
-            echo '<a href="../controllers/eliminarSocio.php?id=' . $fila[ 'id' ] . '">Eliminar</a>';
+            echo '<a href="../views/verSocio.php?id=' . $fila[ 'id' ] . '">Entrar</a>';
             echo '</td>';
             echo '</tr>';
         }

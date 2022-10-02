@@ -1,5 +1,5 @@
 <?php 
-    include 'Connection.php';
+    //include 'Connection.php';
     class SociosInstitucion {
         private $id;
         private $id_socio;
@@ -21,7 +21,7 @@
         }
 
         public function getAllSociosInstitucion() {
-            $sql = "SELECT * FROM socios_institucion";
+            $sql = "SELECT * FROM socio_institucion";
             $result = $this->connection->getConnection()->query( $sql );
             $sociosInstitucionales = array();
             while ($row = $result->fetch_assoc()) {
@@ -31,14 +31,14 @@
         }
 
         public function getSocioInstitucionById( $id ) {
-            $sql = "SELECT * FROM socios_institucion WHERE id = $id";
+            $sql = "SELECT * FROM socio_institucion WHERE id = $id";
             $result = $this->connection->getConnection()->query( $sql );
             $socioInstitucional = $result->fetch_assoc();
             return $socioInstitucional ;
         }
         
         public function getSocioInstitucionByPapeleta( $papeleta ) {
-            $sql = "SELECT * FROM socios_institucion WHERE papeleta = '$papeleta'";
+            $sql = "SELECT * FROM socio_institucion WHERE papeleta = '$papeleta'";
             $result = $this->connection->getConnection()->query( $sql );
             $socioInstitucional = $result->fetch_assoc();
             return $socioInstitucional;
