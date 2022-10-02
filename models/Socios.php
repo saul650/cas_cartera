@@ -38,12 +38,9 @@
         public function getSocioById( $id ) {
             $sql = "SELECT * FROM socios WHERE id = $id";
             $result = $this->connection->getConnection()->query( $sql );
-            //$socio = $result->fetch_assoc();
-            //return $socio;
             $socios = array();
             while ($row = $result->fetch_assoc()) {
                 $socios[] = $row;
-                //echo json_encode($row) . '<br>';
             }
             return $socios;
         }
@@ -51,11 +48,9 @@
         public function getSocioByNroDoc( $nro_doc ) {
             $sql = "SELECT * FROM socios WHERE nro_doc = '$nro_doc'";
             $result = $this->connection->getConnection()->query( $sql );
-            //$socio = $result->fetch_assoc();
             $socios = array();
             while ($row = $result->fetch_assoc()) {
                 $socios[] = $row;
-                //echo json_encode($row) . '<br>';
             }
             return $socios;
         }
