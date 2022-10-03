@@ -11,12 +11,20 @@
 
         <h3> Selecciona Prestamo </h3>
 
-        <form action="" method="post">
-          <select>
-            <option> Prestamo 1 </option>
-            <option> Prestamo 2 </option>
-            <option> Prestamo 3 </option>
-          </select>
+        <form action="actions/createPrestamo.php" method="post">
+          <input type="hidden" name="socio" value="' . $socio[ 'id' ] . '">
+          <div>
+            <label for="tasa"> Tipo de Prestamo </label>
+            <select id="tasa" name="tasa" id="prestamo">
+              <option value="1"> Prestamo 1 </option>
+              <option value="2"> Prestamo 2 </option>
+              <option value="3"> Prestamo 3 </option>
+              <option value="4"> Prestamo 4 </option>
+              <option value="5"> Prestamo 5 </option>
+              <option value="6"> Prestamo 6 </option>
+              <option value="7"> Prestamo 7 </option>
+            </select>
+          </div>
           <div>
             <label for="refinanciamiento"> Refinanciamiento </label>
             <input id="refinanciamiento" type="checkbox" name="refinanciamiento" value="1" />
@@ -39,9 +47,6 @@
     ';
     echo ( layout( 'Ver Socio', $socioCard ) );
   }
-  
-  // read path params id and call query to get socio
-
   $id = $_GET[ 'id' ];
   $socio = new Socios();
   $socios = $socio->getSocioById( $id );
